@@ -115,9 +115,9 @@ std::pair<double, double> compute_ppi(double stat_kpss, double stat_bds, double 
 
 template<typename T>
 void execute_iid_tests(const chronovise::MeasuresPool<int, T> &mp) {
-    chronovise::TestKPSS<int, T> test_kpss(0.05, 0);
+    chronovise::TestKPSS <int, T> test_kpss(0.05, 0);
     chronovise::TestBDS <int, T> test_bds(0.05);
-    chronovise::TestRS  <int, T> test_rs(0.05);
+    chronovise::TestRS <int, T> test_rs(0.05);
     
     if (! csv_output) { std:: cout << "Running KPSS..." << std::endl; }
     test_kpss.run(mp);
