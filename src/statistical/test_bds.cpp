@@ -56,7 +56,6 @@ double TestBDS<T_INPUT, T_TIME>::embedding_dimension(unsigned long m, double eps
 
     double sum = 0;
 
-    std::cout<< "start agony..." << std::endl;
 #if defined(_OPENMP)
     #pragma omp parallel for reduction(+:sum) firstprivate(epsilon)
 #endif
@@ -65,7 +64,6 @@ double TestBDS<T_INPUT, T_TIME>::embedding_dimension(unsigned long m, double eps
             sum += indicator_function(s, t, m, epsilon);
         }
     }
-    std::cout<< "end agony..." << std::endl;
 
     return coeff * sum;
 }
