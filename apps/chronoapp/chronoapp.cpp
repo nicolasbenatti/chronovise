@@ -214,9 +214,9 @@ void execute_pwcet_estimation(const chronovise::MeasuresPool<int, T> &mp) {
         std::cout << "Shape (xi):    " << dist->get_shape() << std::endl;
         std::cout << std::endl;
         std::cout << "WCOT:          " << mp.max() << std::endl;
-        std::cout << "WCET @ 10E-6:  " << pwcet.get_wcet(1-1e-6) << std::endl;
-        std::cout << "WCET @ 10E-9:  " << pwcet.get_wcet(1-1e-9) << std::endl;
-        std::cout << "WCET @ 10E-12:  " << pwcet.get_wcet(1-1e-12) << std::endl;
+        std::cout << "WCET @ 1E-6:  " << pwcet.get_wcet(1-1e-6) << std::endl;
+        std::cout << "WCET @ 1E-9:  " << pwcet.get_wcet(1-1e-9) << std::endl;
+        std::cout << "WCET @ 1E-12:  " << pwcet.get_wcet(1-1e-12) << std::endl;
     } else {
         std::cout << ',' << dist->get_location() << ',' << dist->get_scale() << ',' << dist->get_shape()
                   << ',' << pwcet.get_wcet(1-1e-9) << std::endl;
